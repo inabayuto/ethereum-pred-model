@@ -122,6 +122,7 @@ test_data = dataset[train_size - time_step: , :]
 x_test = []
 for i in range(time_step, len(test_data)):
     x_test.append(test_data[i-time_step:i, 0])
+y_test = dataset[train_size:, :]
 x_test = np.array(x_test)
 x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 
@@ -130,8 +131,19 @@ predicted_price = model.predict(x_test)
 predicted_price = scaler.inverse_transform(predicted_price)
 
 # %% 予測結果の表示
-test_score = np.sqrt(mean_squared_error(predicted_price))
-print(f"Test Score: {test_score}")
+y_test = y_test.squeeze()
+predicted_price = predicted_price.squeeze()
+
+# NaNのマスク（両方にNaNがない行だけを残す）
+mask = ~np.isnan(y_test) & ~np.isnan(predicted_price)
+
+# フィルター適用
+y_test_clean = y_test[mask]
+predicted_clean = predicted_price[mask]
+
+# RMSE計算
+rmse = np.sqrt(mean_squared_error(y_test_clean, predicted_clean))
+print(f"Test Score: {rmse}")
 
 # %% モデルの保存
 output_model_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'output_data')
