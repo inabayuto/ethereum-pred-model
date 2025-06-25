@@ -75,8 +75,7 @@ eth_path = os.path.join(DATA_DIR, "merged_eth.csv")
 eth_df = pd.read_csv(eth_path)
 print(eth_df.head())
 
-# %%
-#　Closeコラムのみ抽出
+# %%　Closeコラムのみ抽出
 data = eth_df.filter(["Close"])
 dataset = data.values
 print(dataset)
