@@ -40,6 +40,7 @@
 4. 学習済みモデルや予測結果を保存 
 
 ## 参考
-- <https://qiita.com/MuAuan/items/3e876ac94b5600448912>
-- <https://qiita.com/pyman123/items/70406028c7607102ad83>
-- <https://aifx.tech/ethereum%E3%81%AE%E9%81%8E%E5%8E%BB%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B/>
+- [LightGBMで株価予測](https://qiita.com/MuAuan/items/3e876ac94b5600448912)
+- [LSTMによる株価予測](https://qiita.com/pyman123/items/70406028c7607102ad83)
+- [イーサリアムデータ取得](https://aifx.tech/ethereum%E3%81%AE%E9%81%8E%E5%8E%BB%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%99%E3%82%8B/)
+- [GoogleColabの使い方まとめ](https://qiita.com/shoji9x9/items/0ff0f6f603df18d631ab)
